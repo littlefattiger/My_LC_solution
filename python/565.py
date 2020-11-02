@@ -1,6 +1,8 @@
-# all the arr would only circulate once, it does not matter which one we begin, we can circulate all arrays. and we need to get the longest one.
 #https://leetcode.com/problems/array-nesting/
-# general idea
+
+# all the arr would only circulate once, it does not matter which one we begin, we can circulate all arrays. and we need to get the longest one.
+
+# general idea, my original idea is too complex, but it can pass oj
 
 def arrayNesting(self, nums: List[int]) -> int:
         d1 = dict()
