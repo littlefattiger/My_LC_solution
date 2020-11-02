@@ -45,3 +45,17 @@ def arrayNesting(self, nums: List[int]) -> int:
                 v = nums[v]
             res = max(res,cnt)
         return res
+# space saving, using O(1)
+    def arrayNesting(self, nums: List[int]) -> int:
+        
+        res = 1
+        n = len(nums)
+         
+        for v in nums:
+            cnt = 0
+            while nums[v] != v:
+                cnt += 1
+                nums[v], v = v, nums[v]
+                 
+            res = max(res,cnt)
+        return res
