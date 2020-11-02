@@ -2,6 +2,7 @@
 #the idea is not easy. Use a stack to keep an increasing stack from reverse order, if it is smaller, then using binary seach to seach the first one >= current value
 # and also include the index in the array, and we can easily get the diff.
 # the idea that findest the leffest position that current value is larger or equal to, the idea is great., and also reverse order, hard to think out. This solution refer some discussion
+# here find the first one larger than current value, is equavalent to find the farrest. because we using stack here and reverse order to insert.
 
     def maxWidthRamp(self, A: List[int]) -> int:
         res = 0
