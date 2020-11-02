@@ -15,3 +15,6 @@ class Solution:
                 if gcd(i,j) == 1:
                     res.append(str(i) + '/' + str(j))
         return res
+    # one line solution
+    #def simplifiedFractions(self, n):
+    #    return ['%d/%d' % (a, b) for a in range(1, n) for b in range(a + 1, n + 1) if math.gcd(a, b) == 1]
