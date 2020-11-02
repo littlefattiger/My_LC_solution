@@ -1,4 +1,5 @@
 # all the arr would only circulate once, it does not matter which one we begin, we can circulate all arrays. and we need to get the longest one.
+#https://leetcode.com/problems/array-nesting/
 # general idea
 
 def arrayNesting(self, nums: List[int]) -> int:
@@ -30,3 +31,17 @@ def arrayNesting(self, nums: List[int]) -> int:
             self.res = max(self.res, helper(i, d1, dict(),d3,0))
         return self.res
 # effective one
+# only circulate once, and use a seen array to track
+    def arrayNesting(self, nums: List[int]) -> int:
+        
+        res = 0
+        n = len(nums)
+        seen = [False]*n
+        for v in nums:
+            cnt = 0
+            while not seen[v]:
+                cnt += 1
+                seen[v] = True
+                v = nums[v]
+            res = max(res,cnt)
+        return res
