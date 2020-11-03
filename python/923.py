@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/3sum-with-multiplicity/
 # just think about there is 3 number, either 3 are the same or 2 are the same or they are all different
+# if not enough number there, then just add 0 ehre, because we had c[i] -1 and - 2
 class Solution:
     def threeSumMulti(self, A: List[int], target: int) -> int:
         c = Counter(A)
