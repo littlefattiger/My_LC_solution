@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/minimum-window-substring/
-# this is a very straightforward sliding window problem, expand right first, then constrint left
+# this is a very straightforward sliding window problem, expand right first, then shirink left
 
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
