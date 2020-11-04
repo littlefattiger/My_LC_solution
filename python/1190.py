@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/
-# refer answer from lee215. Here we use a list with " is to simulate the situation, need to familar with it, add a new " at the beginning to get result
+# refer answer from lee215. Here we use a list with " is to simulate the situation, need to familar with it, add a new " at the beginning to get result, every ( has a " to store its current value
 
 
 class Solution:
