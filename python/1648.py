@@ -27,3 +27,23 @@ class Solution:
              0 | 0 | 0 | 0 | 0 
              
              """
+# binary search idea is also cool. IT is to search a value that the price >k is sold and some of price k is sold.
+
+class Solution:
+    def maxProfit(self, inventory: List[int], orders: int) -> int:
+        l = 0
+        r = max(inventory) 
+        while l < r:
+            m = (l + r)//2
+            n_sell = sum(i - m for i in inventory if i >= m)
+            if n_sell > orders:
+                l = m + 1
+            else:
+                r = m
+        value = 0
+        for v in inventory:
+            if v > l:
+                value += (v - l) *(v + l + 1)//2
+                orders -= (v - l)
+        value += orders*l
+        return value%(10**9 + 7)
