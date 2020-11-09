@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/
 # remember to check whether this position is visited when we process the point, maybe it has been visited by other path, then we did not need to process this point.
-# otherwise, it would TlE
+# otherwise, it would TlE, double layer save. If it is there, do not add, and if it is there, do not process. Important pruning.
 #Like 16, 17 is important
 class Solution:
     def minCost(self, grid: List[List[int]]) -> int:
