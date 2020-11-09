@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/shortest-path-to-get-all-keys/
 # the problem is very straightforward, just use a bfs method, and use bit mask to store available keys. The important thing to remember is that, in your each move, you need to store the current key, incase you change it in your previous move.
 # use location and keys as the indicator whether you are in this position before
+# copy the key value in every steps
 class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
         m = len(grid)
