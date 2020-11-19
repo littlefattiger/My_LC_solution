@@ -1,4 +1,5 @@
 # the query, is to search position from 0 to i - 1, not include i
+# index there is 1 based
 class FenwickTree():
     
     def __init__(self, n):
