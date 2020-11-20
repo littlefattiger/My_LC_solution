@@ -1,4 +1,6 @@
-
+# remove from list
+# remove from tail
+# insert into head, used double linked list can reach o 1 time
 
 
 # https://leetcode.com/problems/lru-cache/
