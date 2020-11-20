@@ -24,3 +24,6 @@ class LRUCache:
         self.dict[key] = value
         if len(self.dict) > self.cap:
             self.dict.popitem(last=False) 
+
+# OrderedDict.popitem(last=True)
+# The popitem() method for ordered dictionaries returns and removes a (key, value) pair. The pairs are returned in LIFO order if last is true or FIFO order if false.
