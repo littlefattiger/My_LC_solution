@@ -1,3 +1,5 @@
+# if pass bounder, + 1, if it  is -1 return
+# https://leetcode.com/problems/island-perimeter/
 class Solution:
     def islandPerimeter(self, grid: List[List[int]]) -> int:
         
