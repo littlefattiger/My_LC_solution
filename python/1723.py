@@ -1,5 +1,8 @@
 # python need to use traditional DFS and binary search and in addition, we need to use prune, with flag = 1 to deal with symetry.
 
+# 1, use dp, would TLE
+# 2, use dfs and binary search, assign worker to deal with ubset states, would also TLE
+# 3, use traditional dfs, and binary search. It is easy to prune, use a flag, to assign to worker = 0 obly once, meaning try only once.
 class Solution:
     def minimumTimeRequired(self, jobs: List[int], k: int) -> int:
         n = len(jobs)
