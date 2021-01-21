@@ -32,10 +32,10 @@ class Solution:
                 
             else:
                 p, t = stack.pop()
-                time_spend[p] += time + 1 - t
+                time_spend[p]  = max(time + 1 - t, time_spend[p])
                 
         return time_spend
 s = Solution()
 
-print(s.exclusiveTime(2, ["0:start:0","1:start:2","1:end:5","0:end:6"]))
-print(s.inclusiveTime(2, ["0:start:0","1:start:2","1:end:5","0:end:6"]))
+print(s.exclusiveTime(2, ["0:start:0","0:start:2","0:end:5","1:start:7","1:end:7","0:end:8"]))
+print(s.inclusiveTime(2, ["0:start:0","0:start:2","0:end:5","1:start:7","1:end:7","0:end:8"]))
