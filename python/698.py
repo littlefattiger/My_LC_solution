@@ -8,7 +8,9 @@ class Solution:
         nums.sort(reverse = True)
         def helper(nums,pos,cursum,target, k):
             n = len(nums)
-             
+            if  cursum > target:
+                return False
+                # important pruning
             if k == 1:
                 return True
             if cursum == target:
