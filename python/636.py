@@ -1,7 +1,5 @@
-
-# if it is start, enter the stack, else pop up. we can calculate the time spend before. Only start would be in the stack
 class Solution:
-    def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:
+    def exclusiveTime(self, n: int, logs):
         stack = []
         time_spend = [0] * n
         last_time = 0
@@ -20,3 +18,24 @@ class Solution:
                 time_spend[p] += 1
                 last_time += 1
         return time_spend
+    def inclusiveTime(self, n: int, logs):
+        stack = []
+        time_spend = [0] * n
+         
+        for log in logs:
+            process, typeOfAction, time = log.split(':')
+            process, time = int(process), int(time)
+             
+             
+            if typeOfAction == 'start':
+                stack.append((process, time))
+                
+            else:
+                p, t = stack.pop()
+                time_spend[p] += time + 1 - t
+                
+        return time_spend
+s = Solution()
+
+print(s.exclusiveTime(2, ["0:start:0","1:start:2","1:end:5","0:end:6"]))
+print(s.inclusiveTime(2, ["0:start:0","1:start:2","1:end:5","0:end:6"]))
