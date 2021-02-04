@@ -7,3 +7,8 @@
 @ComponentScan -> when you generate beans, what package you would search for to initiate the class
 
 @Value -> what initialt you would wnat to initiate this instance.
+
+@Service 
+
+@Qualifier
+
