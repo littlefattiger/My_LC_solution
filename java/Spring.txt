@@ -12,3 +12,6 @@
 
 @Qualifier
 
+@Target
+
+@Retention
