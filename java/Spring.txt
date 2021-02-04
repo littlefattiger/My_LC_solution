@@ -1,0 +1,9 @@
+@AutoWired -> make this variable initiate, like  = new;
+@Bean -> put the instant into the container
+@Component -> this class would server as a component as others
+
+@Configuration
+
+@ComponentScan -> when you generate beans, what package you would search for to initiate the class
+
+@Value -> what initialt you would wnat to initiate this instance.
