@@ -26,4 +26,25 @@ class Solution:
                 out_degree[v] -= 1
                 if out_degree[v] == 0:
                     queue.append(v)
-        return sorted(ans)
+        return sorted(and)
+# DFS
+class Solution:
+    def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
+        n = len(graph)
+         
+        color = [0] * n 
+        def dfs(i):
+            if color[i] != 0:
+                return color[i] == 2
+            color[i] = 1
+            for child in graph[i]:
+                if not dfs(child):
+                    return False
+            color[i] = 2
+            return True
+        ans =[]
+        for i in range(n):
+            if dfs(i):
+                ans.append(i)
+        return ans
+
