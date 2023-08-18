@@ -1,3 +1,4 @@
+import heapq
 class Solution:
     def maximumSafenessFactor(self, grid: List[List[int]]) -> int:
         n = len(grid)
